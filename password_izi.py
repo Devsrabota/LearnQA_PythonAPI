@@ -11,6 +11,7 @@ aa = tables[1]
 #
 a1 = aa['2019[13]'][:]
 a2 = a1.tolist()
+#
 for a3 in a2:
   login = {'login': 'super_admin','password': '111'}
   login['password'] = a3
@@ -25,6 +26,7 @@ for a3 in a2:
   else:
           print('Yes')
           break
+
           
 
 
