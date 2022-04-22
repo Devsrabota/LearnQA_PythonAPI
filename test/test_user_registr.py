@@ -27,10 +27,10 @@ class TestUserRegister(BaseCase):
           elif email_st == 255:
                assert True, f"error '{email_all}' 255 simvol"
 
-               assert response.status_code == 400, f"Status Code bad"
+          assert response.status_code != 400, f"Status Code bad"
 
-               assert str2 != '', f"error '{email_all}' not @"
-               assert str1 != '', f"error not name@'{str3}'"
-               assert str3 != '', f"error not '{str1}'@host"
+          assert len(str2) != 0, f"error '{email_all}' not @"
+          assert len(str1) != 0, f"error not name@'{str3}'"
+          assert len(str3) != 0, f"error not '{str1}'@host"
                
                
